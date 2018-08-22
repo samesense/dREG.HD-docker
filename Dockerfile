@@ -3,7 +3,7 @@ MAINTAINER Perry Evans <https://github.com/samesense>
 
 RUN apt-get update -qqq \
 && apt-get install -y wget curl git bedtools \
-&& wget "http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/bedGraphToBigWig" -O /bin/begGraphToBigWig
+&& wget "http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/bedGraphToBigWig" -O /bin/bedGraphToBigWig
 
 RUN chmod +x /bin/bedGraphToBigWig
 
