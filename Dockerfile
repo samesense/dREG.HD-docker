@@ -13,3 +13,5 @@ RUN git clone https://github.com/Danko-Lab/dREG.HD \
 
 RUN apt-get autoremove -y \
 && apt-get remove --purge -y git
+
+ENV PATH dREG.HD/:/bin/:$PATH
