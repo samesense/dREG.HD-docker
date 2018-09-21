@@ -7,7 +7,7 @@ RUN apt-get update -qqq \
 
 RUN chmod +x /bin/bedGraphToBigWig
 
-RUN git clone https://github.com/Danko-Lab/dREG.HD \
+RUN git clone https://github.com/samesense/dREG.HD \
 && cd dREG.HD \
 && R CMD INSTALL dREG.HD
 
