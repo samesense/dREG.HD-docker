@@ -11,6 +11,7 @@ RUN git clone https://github.com/samesense/dREG.HD \
 && cd dREG.HD \
 && R CMD INSTALL dREG.HD
 
+RUN apt-get install -y r-cran-snow
 RUN R --vanilla <<EOF
 install.packages('snowfall', repos='http://cran.us.r-project.org')
 q()
