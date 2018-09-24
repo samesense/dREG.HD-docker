@@ -11,6 +11,8 @@ RUN git clone https://github.com/samesense/dREG.HD \
 && cd dREG.HD \
 && R CMD INSTALL dREG.HD
 
+RUN apt-get install -y r-cran-snow
+
 RUN apt-get autoremove -y \
 && apt-get remove --purge -y git
 
