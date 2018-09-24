@@ -11,7 +11,10 @@ RUN git clone https://github.com/samesense/dREG.HD \
 && cd dREG.HD \
 && R CMD INSTALL dREG.HD
 
-RUN apt-get install -y r-cran-snow r-cran-snowfall
+RUN R --vanilla <<EOF
+install.packages('snowfall', repos='http://cran.us.r-project.org')
+q()
+EOF
 
 RUN apt-get autoremove -y \
 && apt-get remove --purge -y git
